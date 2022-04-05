@@ -26,9 +26,15 @@ app.get('/script', (req, res) => {
     res.sendFile(syspath.join(__dirname, 'html/script.js'))
 })
 
-app.get('/data', (req, res) => {
+app.get('/esercizi', (req, res) => {
     con.query('select * from esercizio', (err, result) => {
         if (err) throw err
+        res.send(result)
+    })
+})
+app.get('/serie', (req, res) => {
+    con.query('select * from serie where esercizio = ' + req.query.id, (err, result) => {
+        if (err) return err
         res.send(result)
     })
 })

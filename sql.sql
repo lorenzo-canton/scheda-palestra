@@ -6,11 +6,7 @@ create table esercizio (
 create table serie (
     id int auto_increment primary key,
     esercizio int not null,
-    numero int,
+    numero varchar(100) not null,
+    cedimento int,
     foreign key (esercizio) references esercizio(id)
-);
-create table punto (
-    serie int references serie(id),
-    numero int,
-    primary key(serie, numero)
 );
