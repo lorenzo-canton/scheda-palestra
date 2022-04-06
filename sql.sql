@@ -6,6 +6,7 @@ create table esercizio (
 create table serie (
     id int auto_increment primary key,
     esercizio int not null,
+    peso int,
     numero varchar(100) not null,
     cedimento int,
     foreign key (esercizio) references esercizio(id)
