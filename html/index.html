@@ -8,23 +8,20 @@
 </head>
 <body>
     <h1>Scheda</h1>
+    <form action="/addesercizio" method="POST">
+        <fieldset>
+            <legend>Aggiungi esercizio</legend>
+            <label>Nome:</label>
+            <input type="text" name="nome">
+            <br>
+            <label>Descrizione:</label>
+            <br>
+            <textarea name="descrizione"></textarea>
+            <br>
+            <input type="submit" value="Invia">
+        </fieldset>
+    </form>
     <div id="main">
-        <template>
-            <fieldset id="tema">
-                <legend id="nome">Nome</legend>
-                <p>descrizione di robe da fare</p>
-                <table>
-                    <tr>
-                        <th>
-                            Num
-                        </th>
-                        <th>
-                            Cedimento
-                        </th>
-                    </tr>
-                </table>
-            </fieldset>    
-        </template>
     </div>
     <script src="/script"></script>
 </body>
